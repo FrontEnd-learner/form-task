@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Form task</title>
     <!-- Fonts -->
     <!-- Style -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="profile-settings">
+                <form class="profile-settings-form" action="https://echo.htmlacademy.ru" method="POST">
+                    <!-- HEADER -->
+                    <header class="profile-settings-form-header">
+                        <h1 class="profile-settings-form-title">Account settings</h1>
+                        <a class="profile-settings-form-close-link" href="#">
+                            <img src="img/cross-small.svg" alt="img" width="24" height="24">
+                        </a>
+                    </header>
+
+                    <!-- FORM BODY -->
+                    <div class="profile-settings-form-body">
+                        <img class="profile-settings-form-avatar" src="img/rasmim.png" alt="Avatar" width="60" height="60">
+                        <div class="profile-settings-form-group">
+                            <label class="profile-settings-form-label" for="settings-username-input">Username</label>
+                            <input class="profile-settings-form-field" type="text" id="settings-username-input" name="username" placeholder="Enter your user name" required>
+                        </div>
+
+                        <div class="profile-settings-form-group-row">
+                            <div class="profile-settings-form-group">
+                                <label class="profile-settings-form-label" for="settings-first-name-input">First name</label>
+                                <input class="profile-settings-form-field" type="text" name="first_name" id="settings-first-name-input" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="profile-settings-form-group">
+                                <label class="profile-settings-form-label" for="settings-last-name-input">Last name</label>
+                                <input class="profile-settings-form-field" type="text" name="last_name" id="settings-last-name-input" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        <div class="profile-settings-form-group">
+                            <label class="profile-settings-form-label" for="settings-form-email-input">Email</label>
+                            <input class="profile-settings-form-field" type="email" name="email" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" id="settings-form-email-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="profile-settings-form-group">
+                            <label class="profile-settings-form-label" for="settings-form-bio-input">Bio</label>
+                            <textarea class="profile-settings-form-field profile-settings-form-textarea" name="bio" id="settings-form-bio-input" placeholder="Tell us about yourself" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <footer class="profile-settings-form-actions">
+                        <button class="profile-settings-form-action" type="button">Cancel</button>
+                        <button class="profile-settings-form-action" type="submit">Save</button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
